@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiAppCarouselView.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiAppCarouselView"
+    x:DataType="local:MainViewModel">
+
+    <Grid RowDefinitions="Auto,*,*">
+
+        <Grid Grid.Row="0" RowDefinitions="40,1">
+            <Label
+                Grid.Row="0"
+                HorizontalOptions="Center"
+                Text="Static vs Dynamic Carousel in CollectionView Header"
+                VerticalOptions="Center" />
+            <BoxView
+                Grid.Row="1"
+                HeightRequest="1"
+                Color="Black" />
+        </Grid>
+
+        <Button
+            Grid.Row="1"
+            BackgroundColor="Red"
+            HeightRequest="40"
+            Text="Add"
+            TextColor="White"
+            Margin="10,0,10,10"
+            Padding="10"
+            VerticalOptions="End"
+            Command="{Binding DoAddCommand}" />
+
+        <Button
+            Grid.Row="2"
+            BackgroundColor="Red"
+            HeightRequest="40"
+            Text="Static"
+            TextColor="White"
+            Margin="10,0,10,0"
+            Padding="10"
+            VerticalOptions="Start"
+            Command="{Binding GoToStaticCommand}" />
+
+    </Grid>
+
+</ContentPage>
